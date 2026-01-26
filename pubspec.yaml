@@ -1,7 +1,7 @@
 name: fl_render_protocol
 description: "Render Protocol Flutter Package"
 version: 0.0.1
-homepage:
+publish_to: none
 
 environment:
   sdk: ^3.10.1
@@ -10,6 +10,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  rp_generated_dart:
+    git:
+      url: https://github.com/renderprotocol/rp_generated_dart.git
+      ref: main
 
 dev_dependencies:
   flutter_test:
@@ -20,7 +25,7 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
-flutter:
+# flutter:
 
   # To add assets to your package, add an assets section, like this:
   # assets:
