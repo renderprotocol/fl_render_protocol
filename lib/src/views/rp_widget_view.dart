@@ -1,8 +1,8 @@
-import 'package:fl_render_protocol/views/rp_column_view.dart';
-import 'package:fl_render_protocol/views/rp_image_view.dart';
-import 'package:fl_render_protocol/views/rp_row_view.dart';
-import 'package:fl_render_protocol/views/rp_stack_view.dart';
-import 'package:fl_render_protocol/views/rp_text_view.dart';
+import 'package:fl_render_protocol/src/views/rp_column_view.dart';
+import 'package:fl_render_protocol/src/views/rp_image_view.dart';
+import 'package:fl_render_protocol/src/views/rp_row_view.dart';
+import 'package:fl_render_protocol/src/views/rp_stack_view.dart';
+import 'package:fl_render_protocol/src/views/rp_text_view.dart';
 import 'package:flutter/material.dart';
 import 'package:rp_generated_dart/rp_generated_dart.dart';
 
@@ -25,7 +25,7 @@ class RPWidgetView extends StatelessWidget {
       case .image:
         return RPImageView(image: widget.image);
       case .notSet:
-        return SizedBox();
+        return const SizedBox();
     }
   }
 }
