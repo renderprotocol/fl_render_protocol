@@ -1,10 +1,12 @@
+import 'dart:io';
+
 import 'package:fl_render_protocol/fl_render_protocol.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  final config = RPConfig(address: "127.0.0.1", port: 50051);
+  final ip = Platform.isAndroid ? "10.0.2.2" : "127.0.0.1";
+  final config = RPConfig(address: ip, port: 50051);
   await RenderProtocol.initialize(config: config);
 
   runApp(const RPExampleApp());
