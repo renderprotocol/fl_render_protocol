@@ -2,7 +2,7 @@
 import 'package:fl_render_protocol/src/views/layout/rp_column_view.dart';
 import 'package:fl_render_protocol/src/views/layout/rp_row_view.dart';
 import 'package:fl_render_protocol/src/views/layout/rp_stack_view.dart';
-import 'package:fl_render_protocol/src/views/layout/rp_scroll_view_view.dart';
+import 'package:fl_render_protocol/src/views/layout/rp_scrollable_view.dart';
 import 'package:fl_render_protocol/src/views/layout/rp_lazy_list_view.dart';
 import 'package:fl_render_protocol/src/views/layout/rp_lazy_grid_view.dart';
 import 'package:fl_render_protocol/src/views/layout/rp_wrap_view.dart';
@@ -65,8 +65,8 @@ class RPWidgetView extends StatelessWidget {
         return RPColumnView(column: widget.column);
       case .stack:
         return RPStackView(stack: widget.stack);
-      case .scrollView:
-        return RPScrollViewView(scrollView: widget.scrollView);
+      case .scrollable:
+        return RPScrollableView(scrollable: widget.scrollable);
       case .lazyList:
         return RPLazyListView(lazyList: widget.lazyList);
       case .lazyGrid:
